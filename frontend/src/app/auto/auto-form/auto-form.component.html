@@ -1,0 +1,37 @@
+<br>
+<div class="container">
+
+    <div class="row ">
+        <!-- <div class="col-md-6">
+            <label for="id" class="form-label">Id:</label>
+            <input type="number" class="form-control" name="id" [(ngModel)]="id">
+        </div> -->
+        <div class="col-md-6">
+            <label for="patente" class="form-label">Patente:</label>
+            <input type="text" class="form-control" name="patente" [(ngModel)]="patente">
+        </div>
+    </div>
+
+    <br>
+
+    <div class="row ">
+        <div class="col-md-6">
+            <label for="modelo" class="form-label">Modelo:</label>
+            <input type="number" class="form-control" name="modelo" [(ngModel)]="modelo">
+        </div>
+        <div class="col-md-6">
+            <label for="marca" class="form-label">Marca::</label>
+            <input type="text" class="form-control" name="marca" [(ngModel)]="marca">
+        </div>
+    </div>
+
+<br>
+
+    <div class="row ">
+        <div class="col-md-12">
+            <button type="submit" class="btn bg-primary" *ngIf="!isEdit" (click)="onCreate()">Guardar</button>
+            <button type="submit" class="btn bg-primary" *ngIf="isEdit" (click)="onEdit()">Editar</button>
+            <button type="submit" class="btn bg-primary mx-2" (click)="onCancel()">Cancelar</button>
+        </div>
+    </div>    
+</div>

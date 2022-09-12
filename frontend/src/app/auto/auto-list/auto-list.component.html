@@ -1,0 +1,30 @@
+<div class="container-fluid py-5 bg-success">
+    <div class="container text-white">
+        <h1 class="display-3">Lista de Jugadores</h1>
+    </div>
+</div>
+
+<div class="container">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Patente</th>
+                <th>Modelo</th>
+                <th>Marca</th>  
+                <th>Acciones</th>                         
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let x of autos">
+                <td> {{x.patente}} </td>
+                <td> {{x.modelo}} </td>
+                <td> {{x.marca}} </td>           
+                 
+                <td><button class="btn bg-warning" (click)="edit(x.patente)">Editar</button></td>
+                <td><button class="btn bg-danger" (click)="delete(x.patente)">Eliminar</button></td>                      
+            </tr>
+        </tbody>
+    </table>
+    <button class="btn btn-succes bg-primary" (click)="create()">Agregar auto</button>
+</div>
+
